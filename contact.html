@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KJ Landscaping - Contact</title>
+  <link rel="icon" href="Logo.png" type="image/x-icon">
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <!-- FIXED Banner/Header Section -->
+ <header class="banner" style="display:flex; align-items:center; gap:16px; background:#012601; padding:0px; border-radius:8px;">  <div class="logo">
+  <img src="img/logo.png" alt="KJ Landscaping" class="logo-img" />
+  </div>
+  <div class="logo-text" style="display:flex; flex-direction:column; line-height:1.1;">
+  <h1 class="site-title" style="margin:0; font-size:1.8rem; color:#e8e6e0; font-weight:700;">KJ LANDSCAPING</h1>
+  </div>
+
+  <nav class="main-nav" style="margin-left:auto;">
+  <ul style="display:flex; list-style:none; gap:20px; margin:0; padding:0;">
+  <li><a href="home.html" style="color:white; text-decoration:none;">Home</a></li>
+  <li><a href="services.html" style="color:white; text-decoration:none;">Services</a></li>
+  <li><a href="gallery.html" style="color:white; text-decoration:none;">Gallery</a></li>
+  </ul>
+  </nav>
+  
+  </header>
+
+
+  <!-- Contact Form -->
+  <div class="form-box">
+  <form class="contact-container" action="https://api.web3forms.com/submit" method="POST">
+      <h2 class="box-title">Get in touch!</h2>
+
+      <input type="hidden" name="access_key" value="616cdf03-65e4-4dd6-87e2-40bfffec8543" />
+
+      <label>Your Name</label>
+      <input type="text" name="name" placeholder="Enter your name" required />
+
+      <label>Email</label>
+      <input type="email" name="email" placeholder="Enter your email address" required />
+
+      <label>What do you require?</label>
+      <select name="require" required>
+        <option value="" disabled selected>Select issue</option>
+        <option value="Support">Support</option>
+        <option value="A Quote">Get A Quote</option>
+      </select>
+
+      <label>Message</label>
+      <textarea name="message" placeholder="Enter a message" required></textarea>
+
+      <button type="submit">Submit →</button>
+  </form>
+</div>
+
+<div id="cookie-popup" class="cookie-popup">
+  <p>This website uses cookies to enhance your experience. By continuing to browse, you accept our cookie policy.</p>
+  <button id="cookie-accept">Okay</button>
+</div>
+
+<script>
+if (!localStorage.getItem("cookieAccepted")) {
+    window.addEventListener("load", () => {
+        document.getElementById("cookie-popup").classList.add("show");
+    });
+}
+
+document.getElementById("cookie-accept").addEventListener("click", () => {
+    document.getElementById("cookie-popup").classList.remove("show");
+    localStorage.setItem("cookieAccepted", "true");
+});
+</script>
+
+
+</body>
+</html>
